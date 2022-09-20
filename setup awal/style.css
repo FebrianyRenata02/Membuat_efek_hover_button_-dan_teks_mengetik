@@ -1,0 +1,222 @@
+body,
+html {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  transition: all 0.7s ease-in-out;
+}
+
+div {
+  position: relative;
+  top: 60%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+}
+
+.typing > * {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typingAnim 7s steps(27);
+}
+
+@keyframes typingAnim {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* ke 2 */
+
+ul {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+ul li {
+  position: relative;
+  list-style: none;
+  width: 180px;
+  height: 80px;
+  margin: 0 50px;
+  transform: rotate(-30deg) skew(25deg);
+  background: #ccc;
+}
+
+ul li span {
+  position: absolute;
+  top: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: deeppink;
+  font-size: 30px;
+  transition: 0.5s;
+}
+
+/* For mobile phones: */
+[class*='col-'] {
+  width: 100%;
+}
+
+ul li:hover span {
+  box-shadow: -5px -3px rgba(0, 0, 0, 5);
+}
+
+ul li:hover span:nth-child(2) {
+  transform: translate(30px, -30px);
+  opacity: 1;
+}
+
+ul li:hover span:nth-child(4) {
+  transform: translate(20px, -20px);
+  opacity: 0.8;
+}
+
+ul li:hover span:nth-child(2) {
+  transform: translate(10px, -10px);
+  opacity: 0.6;
+}
+
+ul li:hover span:nth-child(4) {
+  transform: translate 0, 0;
+  opacity: 0.4;
+}
+
+ul li:nth-child(1) span {
+  background: linear-gradient(#1f1e1e, #00ec00, #eee090);
+  transition: all 0.9s ease-in-out;
+}
+
+ul li:nth-child(2) span {
+  background: linear-gradient(#373838, #4dc4c4d3, #cdc9c9);
+  transition: all 0.9s ease-in-out;
+}
+
+/*untuk layar device berukuran besar*/
+@media screen and (min-width: 800px) {
+  .container {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* For mobile phones: */
+[class*='col-'] {
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {
+    width: 8.33%;
+  }
+  .col-s-2 {
+    width: 16.66%;
+  }
+  .col-s-3 {
+    width: 25%;
+  }
+  .col-s-4 {
+    width: 33.33%;
+  }
+  .col-s-5 {
+    width: 41.66%;
+  }
+  .col-s-6 {
+    width: 50%;
+  }
+  .col-s-7 {
+    width: 58.33%;
+  }
+  .col-s-8 {
+    width: 66.66%;
+  }
+  .col-s-9 {
+    width: 75%;
+  }
+  .col-s-10 {
+    width: 83.33%;
+  }
+  .col-s-11 {
+    width: 91.66%;
+  }
+  .col-s-12 {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {
+    width: 8.33%;
+  }
+  .col-2 {
+    width: 16.66%;
+  }
+  .col-3 {
+    width: 25%;
+  }
+  .col-4 {
+    width: 33.33%;
+  }
+  .col-5 {
+    width: 41.66%;
+  }
+  .col-6 {
+    width: 50%;
+  }
+  .col-7 {
+    width: 58.33%;
+  }
+  .col-8 {
+    width: 66.66%;
+  }
+  .col-9 {
+    width: 75%;
+  }
+  .col-10 {
+    width: 83.33%;
+  }
+  .col-11 {
+    width: 91.66%;
+  }
+  .col-12 {
+    width: 100%;
+  }
+}
+
+/* If the screen size is 600px wide or less, hide the element */
+@media only screen and (max-width: 600px) {
+  div.example {
+    display: none;
+  }
+}
+
+/* If the screen size is 601px or more, set the font-size of <div> to 80px */
+@media only screen and (min-width: 601px) {
+  div.example {
+    font-size: 80px;
+  }
+}
+
+/* If the screen size is 600px or less, set the font-size of <div> to 30px */
+@media only screen and (max-width: 600px) {
+  div.example {
+    font-size: 30px;
+  }
+}
